@@ -1,515 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Inkframe Studio — Interactive Digital Products</title>
-<meta name="description" content="Inkframe Studio is an independent creative studio crafting interactive digital products for artists and educators.">
-<meta property="og:title" content="Inkframe Studio">
-<meta property="og:description" content="Independent creative studio — Tokyo, Japan">
-<meta property="og:url" content="https://inkframe-studio.com">
+<title>Inkframe Studio — 東京・渋谷のクリエイティブスタジオ</title>
+<meta name="description" content="Inkframe Studioは東京・渋谷を拠点とする独立系クリエイティブスタジオです。アーティストや教育者のためのインタラクティブなデジタルプロダクトを開発しています。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=DM+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@300;400;500&family=DM+Mono&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --bg: #0a0a0a;
-    --bg2: #111111;
-    --bg3: #181818;
-    --text: #e8e6e0;
-    --text-muted: #888880;
-    --text-dim: #444440;
-    --accent: #c8b97a;
-    --accent-dim: rgba(200,185,122,0.12);
-    --border: rgba(255,255,255,0.07);
-    --border-accent: rgba(200,185,122,0.3);
-    --green: #5ac47a;
-    --radius: 4px;
-  }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  a { color: inherit; text-decoration: none; }
-
-  /* NAV */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 48px;
-    height: 64px;
-    background: rgba(10,10,10,0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-  }
-
-  .nav-logo {
-    font-family: 'DM Mono', monospace;
-    font-size: 13px;
-    letter-spacing: 0.12em;
-    color: var(--accent);
-    text-transform: uppercase;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 36px;
-    list-style: none;
-    font-size: 13px;
-    color: var(--text-muted);
-    letter-spacing: 0.04em;
-  }
-
-  .nav-links a:hover { color: var(--text); transition: color 0.2s; }
-
-  /* HERO */
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 120px 48px 80px;
-    border-bottom: 1px solid var(--border);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: -200px; right: -200px;
-    width: 600px; height: 600px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(200,185,122,0.04) 0%, transparent 70%);
-    pointer-events: none;
-  }
-
-  .hero-eyebrow {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    color: var(--accent);
-    text-transform: uppercase;
-    margin-bottom: 32px;
-  }
-
-  .hero-eyebrow::before {
-    content: '';
-    display: inline-block;
-    width: 24px;
-    height: 1px;
-    background: var(--accent);
-    vertical-align: middle;
-    margin-right: 12px;
-  }
-
-  .hero-title {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(48px, 7vw, 88px);
-    line-height: 1.05;
-    font-weight: 400;
-    color: var(--text);
-    max-width: 780px;
-    margin-bottom: 32px;
-  }
-
-  .hero-title em {
-    font-style: italic;
-    color: var(--accent);
-  }
-
-  .hero-desc {
-    font-size: 18px;
-    color: var(--text-muted);
-    max-width: 540px;
-    line-height: 1.8;
-    margin-bottom: 48px;
-  }
-
-  .hero-meta {
-    display: flex;
-    gap: 40px;
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    color: var(--text-dim);
-    text-transform: uppercase;
-  }
-
-  .hero-meta span { display: flex; align-items: center; gap: 8px; }
-  .hero-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--green); display: inline-block; }
-
-  /* SECTIONS */
-  section { padding: 96px 48px; border-bottom: 1px solid var(--border); }
-
-  .section-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    color: var(--text-dim);
-    text-transform: uppercase;
-    margin-bottom: 48px;
-  }
-
-  /* PRODUCTS */
-  .product-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-    max-width: 900px;
-  }
-
-  .product-info {
-    padding: 48px;
-    background: var(--bg2);
-  }
-
-  .product-badge {
-    display: inline-block;
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--green);
-    border: 1px solid rgba(90,196,122,0.3);
-    border-radius: 2px;
-    padding: 4px 10px;
-    margin-bottom: 20px;
-  }
-
-  .product-title {
-    font-family: 'DM Serif Display', serif;
-    font-size: 36px;
-    font-weight: 400;
-    color: var(--text);
-    margin-bottom: 16px;
-    line-height: 1.15;
-  }
-
-  .product-desc {
-    font-size: 15px;
-    color: var(--text-muted);
-    line-height: 1.8;
-    margin-bottom: 32px;
-  }
-
-  .product-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--accent);
-    border-bottom: 1px solid var(--border-accent);
-    padding-bottom: 2px;
-    transition: gap 0.2s;
-  }
-
-  .product-link:hover { gap: 12px; }
-
-  .product-visual {
-    background: var(--bg3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 300px;
-    border-left: 1px solid var(--border);
-  }
-
-  .product-visual-inner {
-    text-align: center;
-  }
-
-  .product-visual-icon {
-    width: 72px;
-    height: 72px;
-    border: 1px solid var(--border-accent);
-    border-radius: 16px;
-    margin: 0 auto 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--accent-dim);
-  }
-
-  .product-visual-icon svg { width: 32px; height: 32px; stroke: var(--accent); fill: none; stroke-width: 1.5; }
-
-  .product-platform {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: var(--text-dim);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-  }
-
-  /* ABOUT */
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: start;
-    max-width: 900px;
-  }
-
-  .about-text h2 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 36px;
-    font-weight: 400;
-    color: var(--text);
-    line-height: 1.2;
-    margin-bottom: 24px;
-  }
-
-  .about-text p {
-    font-size: 15px;
-    color: var(--text-muted);
-    line-height: 1.9;
-    margin-bottom: 16px;
-  }
-
-  .about-stats {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    padding-top: 8px;
-  }
-
-  .stat-item {
-    border-left: 1px solid var(--border-accent);
-    padding-left: 20px;
-  }
-
-  .stat-number {
-    font-family: 'DM Serif Display', serif;
-    font-size: 40px;
-    color: var(--accent);
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-
-  .stat-label {
-    font-size: 13px;
-    color: var(--text-muted);
-  }
-
-  /* CONTACT */
-  #contact { max-width: 900px; margin: 0 auto; }
-
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-  }
-
-  .contact-item {
-    background: var(--bg2);
-    padding: 32px 36px;
-  }
-
-  .contact-item:nth-child(even) { background: var(--bg3); }
-
-  .contact-item-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--text-dim);
-    margin-bottom: 8px;
-  }
-
-  .contact-item-value {
-    font-size: 15px;
-    color: var(--text);
-  }
-
-  .contact-item-value a { color: var(--accent); }
-  .contact-item-value a:hover { text-decoration: underline; }
-
-  /* FOOTER */
-  footer {
-    padding: 40px 48px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .footer-logo {
-    font-family: 'DM Mono', monospace;
-    font-size: 12px;
-    letter-spacing: 0.1em;
-    color: var(--text-dim);
-    text-transform: uppercase;
-  }
-
-  .footer-copy {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--text-dim);
-  }
-
-  /* ABOUT SECTION full width */
-  #about { max-width: 900px; }
-
-  /* MOBILE */
-  @media (max-width: 768px) {
-    nav { padding: 0 24px; }
-    .nav-links { display: none; }
-    .hero { padding: 100px 24px 60px; }
-    .hero-meta { flex-direction: column; gap: 12px; }
-    section { padding: 64px 24px; }
-    .product-card { grid-template-columns: 1fr; }
-    .product-visual { display: none; }
-    .about-grid { grid-template-columns: 1fr; gap: 48px; }
-    .contact-grid { grid-template-columns: 1fr; }
-    footer { flex-direction: column; gap: 12px; text-align: center; }
-  }
+  body { font-family: 'Noto Sans JP', 'Jost', sans-serif; }
+  .hero-eyebrow, .info-label, .company-label, .contact-cell-label, .footer-copy, .footer-links a, .nav-links a { font-family: 'DM Mono', monospace; }
+  .hero-title, .work-title, .work-subtitle, .contact-title { font-family: 'Cormorant Garamond', serif; }
+  .section-label-col span, .hero-label-col span { font-family: 'Cormorant Garamond', serif; }
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="nav-logo">Inkframe Studio</div>
+  <a class="nav-logo" href="index.html">
+    <img src="banner.png" alt="Inkframe Studio">
+  </a>
   <ul class="nav-links">
-    <li><a href="#products">Products</a></li>
     <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#company">Company</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
-<section class="hero">
-  <p class="hero-eyebrow">Inkframe Studio — Tokyo</p>
-  <h1 class="hero-title">Interactive tools for<br><em>artists &amp; educators</em></h1>
-  <p class="hero-desc">
-    We build precise, beautifully crafted digital products that bridge
-    the gap between art and anatomy.
-  </p>
-  <div class="hero-meta">
-    <span><span class="dot"></span> Est. 2026</span>
-    <span>Tokyo, Japan</span>
-    <span>Independent Studio</span>
+<!-- ABOUT -->
+<div class="hero-block" id="about" style="padding-top:68px;">
+  <div class="hero-label-col">
+    <span>About</span>
   </div>
-</section>
+  <div class="hero-main">
+    <p class="hero-eyebrow">Inkframe Studio — Est. 2026</p>
+    <h1 class="hero-title">
+      アーティストと<br>教育者のための<br><em>インタラクティブツール</em>
+    </h1>
+    <p class="hero-desc" style="font-family:'Noto Sans JP',sans-serif; font-size:14px; line-height:2;">
+      Inkframe Studioは、東京・渋谷を拠点とする独立系クリエイティブスタジオです。
+      アートと解剖学、教育の交差点に立ち、精緻でインタラクティブなデジタルプロダクトを開発しています。
+    </p>
+    <div class="info-grid">
+      <div class="info-cell full">
+        <p class="info-label">Organization</p>
+        <p class="info-value">INKFRAME STUDIO</p>
+      </div>
+      <div class="info-cell full">
+        <p class="info-label">Address</p>
+        <p class="info-value">〒150-0041 東京都渋谷区神南1丁目11-4<br>FPGリンクス神南5階</p>
+      </div>
+      <div class="info-cell full">
+        <p class="info-label">Email</p>
+        <p class="info-value">info@inkframe-studio.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div style="text-align:center;">
+      <img src="banner.png" alt="Inkframe Studio" style="max-width:260px; margin:0 auto; opacity:0.82;">
+      <p style="font-family:'Cormorant Garamond',serif; font-size:15px; font-style:italic; color:var(--mid); margin-top:28px; letter-spacing:0.04em;">Craft. Precision. Depth.</p>
+    </div>
+  </div>
+</div>
 
-<section id="products">
-  <p class="section-label">01 — Products</p>
-  <div class="product-card">
-    <div class="product-info">
-      <span class="product-badge">Active — iPad</span>
-      <h2 class="product-title">LAYERS ANATOMY</h2>
-      <p class="product-desc">
-        An interactive 2D anatomy viewer featuring 625 hand-drawn anatomical
-        illustrations organized in a layered, depth-based system. Designed for
-        illustrators, VTuber modelers, and digital educators.
-      </p>
-      <a class="product-link" href="https://layersanatomy.com" target="_blank">
-        Visit layersanatomy.com &#8594;
-      </a>
-    </div>
-    <div class="product-visual">
-      <div class="product-visual-inner">
-        <div class="product-visual-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 4L4 8l8 4 8-4-8-4z"/>
-            <path d="M4 12l8 4 8-4"/>
-            <path d="M4 16l8 4 8-4"/>
-          </svg>
-        </div>
-        <p class="product-platform">iPad · iOS · Steam</p>
+<!-- WORK -->
+<div class="section-block" id="work">
+  <div class="section-label-col">
+    <span>Work</span>
+  </div>
+  <div class="section-content">
+    <div class="work-card">
+      <div class="work-img">
+        <img src="app.jpg" alt="LAYERS ANATOMY — iPadで動作するインタラクティブ解剖学ビューワー">
+      </div>
+      <div class="work-detail">
+        <span class="work-badge">開発中</span>
+        <h2 class="work-title">LAYERS<br>ANATOMY</h2>
+        <p class="work-subtitle">Anatomical Viewer</p>
+        <p class="work-text" style="font-family:'Noto Sans JP',sans-serif; font-size:13px; line-height:2;">
+          手描き解剖図625枚をレイヤー構造で組み上げたインタラクティブ2D解剖学ビューワー。
+          イラストレーター・VTuberモデラー・デジタルクリエイター向けに設計されています。
+        </p>
+        <ul class="work-specs">
+          <li class="work-spec" style="font-family:'Noto Sans JP',sans-serif; font-size:13px;">手描き解剖図 625枚収録</li>
+          <li class="work-spec" style="font-family:'Noto Sans JP',sans-serif; font-size:13px;">レイヤー構造による深度ナビゲーション</li>
+          <li class="work-spec" style="font-family:'Noto Sans JP',sans-serif; font-size:13px;">iPad · iOS · Steam（Windows）対応</li>
+          <li class="work-spec" style="font-family:'Noto Sans JP',sans-serif; font-size:13px;">学術研究者による監修（協議中）</li>
+        </ul>
+        <a class="cta-link" href="https://layersanatomy.com" target="_blank" rel="noopener">
+          layersanatomy.com を見る &rarr;
+        </a>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<section id="about">
-  <p class="section-label">02 — Studio</p>
-  <div class="about-grid">
-    <div class="about-text">
-      <h2>Built for the detail-oriented creator</h2>
-      <p>
-        Inkframe Studio is an independent creative studio based in Shibuya, Tokyo.
-        We develop interactive digital products at the intersection of art,
-        anatomy, and education.
-      </p>
-      <p>
-        Our work is supervised in collaboration with academic researchers and
-        designed to meet the needs of professional artists and institutions alike.
-      </p>
-    </div>
-    <div class="about-stats">
-      <div class="stat-item">
-        <div class="stat-number">625</div>
-        <div class="stat-label">Hand-drawn anatomical illustrations</div>
+<!-- COMPANY -->
+<div class="section-block" id="company" style="background:var(--white);">
+  <div class="section-label-col">
+    <span>Company</span>
+  </div>
+  <div class="section-content">
+    <h2 style="font-family:'Noto Sans JP',sans-serif; font-size:24px; font-weight:300; margin-bottom:36px; letter-spacing:0.04em;">会社概要</h2>
+    <div class="company-grid">
+      <div class="company-cell full">
+        <p class="company-label">屋号</p>
+        <p class="company-value">インクフレームスタジオ（INKFRAME STUDIO）</p>
       </div>
-      <div class="stat-item">
-        <div class="stat-number">2</div>
-        <div class="stat-label">Platforms — iPad &amp; Steam</div>
+      <div class="company-cell full">
+        <p class="company-label">代表者</p>
+        <p class="company-value">児玉 直哉（Naoya Kodama）</p>
       </div>
-      <div class="stat-item">
-        <div class="stat-number">2026</div>
-        <div class="stat-label">Founded in Tokyo, Japan</div>
+      <div class="company-cell full">
+        <p class="company-label">所在地</p>
+        <p class="company-value">〒150-0041 東京都渋谷区神南1丁目11番4号 FPGリンクス神南5階</p>
+      </div>
+      <div class="company-cell full">
+        <p class="company-label">メールアドレス</p>
+        <p class="company-value">info@inkframe-studio.com</p>
+      </div>
+      <div class="company-cell">
+        <p class="company-label">設立</p>
+        <p class="company-value">2026年4月</p>
+      </div>
+      <div class="company-cell">
+        <p class="company-label">事業内容</p>
+        <p class="company-value">アプリケーションソフトウェアおよびデジタルコンテンツの開発・販売・配信</p>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<section id="contact">
-  <p class="section-label">03 — Contact</p>
-  <div class="contact-grid">
-    <div class="contact-item">
-      <p class="contact-item-label">Organization</p>
-      <p class="contact-item-value">Inkframe Studio</p>
-    </div>
-    <div class="contact-item">
-      <p class="contact-item-label">Email</p>
-      <p class="contact-item-value">
-        <a href="mailto:info@inkframe-studio.com">info@inkframe-studio.com</a>
-      </p>
-    </div>
-    <div class="contact-item">
-      <p class="contact-item-label">Location</p>
-      <p class="contact-item-value">Shibuya, Tokyo, Japan</p>
-    </div>
-    <div class="contact-item">
-      <p class="contact-item-label">Product Website</p>
-      <p class="contact-item-value">
-        <a href="https://layersanatomy.com" target="_blank">layersanatomy.com</a>
-      </p>
-    </div>
-    <div class="contact-item" style="grid-column: 1 / -1;">
-      <p class="contact-item-label">Address</p>
-      <p class="contact-item-value">
-        FPG Links Jinnan 5F, 1-11-4 Jinnan, Shibuya-ku, Tokyo 150-0041, Japan
-      </p>
-    </div>
+<!-- CONTACT -->
+<div class="section-block contact-wrap" id="contact">
+  <div class="section-label-col">
+    <span>Contact</span>
   </div>
-</section>
+  <div class="section-content">
+    <h2 class="contact-title">お問い合わせ</h2>
+    <div class="contact-grid">
+      <div class="contact-cell full">
+        <p class="contact-cell-label">Email</p>
+        <p class="contact-cell-value">
+          <a href="mailto:info@inkframe-studio.com">info@inkframe-studio.com</a>
+        </p>
+      </div>
+      <div class="contact-cell full">
+        <p class="contact-cell-label">所在地</p>
+        <p class="contact-cell-value">〒150-0041 東京都渋谷区神南1丁目11番4号 FPGリンクス神南5階</p>
+      </div>
+      <div class="contact-cell full">
+        <p class="contact-cell-label">プロダクトサイト</p>
+        <p class="contact-cell-value">
+          <a href="https://layersanatomy.com" target="_blank" rel="noopener">layersanatomy.com</a>
+        </p>
+      </div>
+    </div>
+    <p class="contact-note" style="font-family:'Noto Sans JP',sans-serif;">お問い合わせはメールにてお受けしております。数営業日以内にご返信いたします。</p>
+  </div>
+</div>
 
 <footer>
-  <span class="footer-logo">Inkframe Studio</span>
-  <span class="footer-copy">&copy; 2026 Inkframe Studio. All rights reserved.</span>
+  <p class="footer-copy">&copy; 2026 INKFRAME STUDIO. All rights reserved.</p>
+  <ul class="footer-links">
+    <li><a href="site-policy.html">サイトポリシー</a></li>
+    <li><a href="privacy.html">プライバシーポリシー</a></li>
+    <li><a href="cookie-policy.html">クッキーポリシー</a></li>
+    <li><a href="tokushoho.html">特定商取引法に基づく表記</a></li>
+  </ul>
 </footer>
 
 </body>
