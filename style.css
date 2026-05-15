@@ -102,14 +102,20 @@ nav {
   background-image: url('about-bg.jpg');
   background-size: cover; background-position: center;
   position: relative;
-  display: flex; align-items: center; justify-content: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 .about-visual::before {
   content: ''; position: absolute; inset: 0;
   background: rgba(10,10,10,0.3);
 }
 .about-visual-inner {
-  position: relative; z-index: 1; text-align: center; padding: 20px;
+  position: relative; z-index: 1; text-align: right; padding: 20px;
+  align-self: flex-end;
+  margin-top: auto;
+  margin-bottom: 32px;
+  margin-right: 20px;
 }
 .about-visual-inner img {
   max-width: 200px; margin: 0 auto;
@@ -117,9 +123,10 @@ nav {
 }
 .about-visual-tagline {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 17px; font-style: italic;
-  color: rgba(255,255,255,0.9); margin-top: 20px; letter-spacing: 0.06em;
-  text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+  font-size: 15px; font-style: italic;
+  color: rgba(255,255,255,0.85); margin-top: 12px; letter-spacing: 0.06em;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+  text-align: right;
 }
 
 .section-heading {
@@ -320,8 +327,10 @@ footer {
   }
   .about-visual {
     aspect-ratio: unset; min-height: 100%;
+    align-items: flex-end; justify-content: flex-end;
   }
-  .about-visual-inner img { max-width: 300px; }
+  .about-visual-inner { margin-right: 40px; margin-bottom: 48px; }
+  .about-visual-inner img { max-width: 260px; }
 
   /* Work: 2カラム */
   .section-pad { padding: 100px 80px; }
