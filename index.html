@@ -7,14 +7,8 @@
 <meta name="description" content="Inkframe Studioは東京・渋谷を拠点とする独立系クリエイティブスタジオです。アーティストや教育者のためのインタラクティブなデジタルプロダクトを開発しています。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@300;400;500&family=DM+Mono&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Mono&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<style>
-  body { font-family: 'Noto Sans JP', 'Jost', sans-serif; }
-  .hero-eyebrow, .info-label, .company-label, .contact-cell-label, .footer-copy, .footer-links a, .nav-links a { font-family: 'DM Mono', monospace; }
-  .hero-title, .work-title, .work-subtitle, .contact-title { font-family: 'Cormorant Garamond', serif; }
-  .section-label-col span, .hero-label-col span { font-family: 'Cormorant Garamond', serif; }
-</style>
 </head>
 <body>
 
@@ -31,55 +25,49 @@
 </nav>
 
 <!-- ABOUT -->
-<div class="hero-block" id="about" style="padding-top:68px;">
-  <div class="hero-label-col">
-    <span>About</span>
-  </div>
-  <div class="hero-main">
+<section id="about">
+  <div class="about-main">
     <p class="hero-eyebrow">Inkframe Studio — Est. 2026</p>
     <h1 class="hero-title">
       アーティストと<br>教育者のための<br><em>インタラクティブツール</em>
     </h1>
-    <p class="hero-desc" style="font-family:'Noto Sans JP',sans-serif; font-size:14px; line-height:2;">
+    <p class="hero-desc">
       Inkframe Studioは、東京・渋谷を拠点とする独立系クリエイティブスタジオです。
       アートと解剖学、教育の交差点に立ち、精緻でインタラクティブなデジタルプロダクトを開発しています。
     </p>
   </div>
-  <div class="hero-right" style="background-image:url('about-bg.jpg'); background-size:cover; background-position:center; position:relative;">
-    <div style="position:absolute; inset:0; background:rgba(250,250,248,0.18);"></div>
-    <div style="text-align:center; position:relative; z-index:1;">
-      <img src="banner.png" alt="Inkframe Studio" style="max-width:260px; margin:0 auto; opacity:0.95; filter:drop-shadow(0 2px 12px rgba(0,0,0,0.18));">
-      <p style="font-family:'Cormorant Garamond',serif; font-size:15px; font-style:italic; color:#fff; margin-top:28px; letter-spacing:0.04em; text-shadow:0 1px 4px rgba(0,0,0,0.4);">Craft. Precision. Depth.</p>
+  <div class="about-visual">
+    <div class="about-visual-inner">
+      <img src="banner.png" alt="Inkframe Studio">
+      <p class="about-visual-tagline">Craft. Precision. Depth.</p>
     </div>
   </div>
-</div>
+</section>
 
 <!-- WORK -->
-<div class="section-block" id="work">
-  <div class="section-label-col">
-    <span>Work</span>
-  </div>
-  <div class="section-content">
+<section id="work">
+  <div class="section-pad">
+    <p class="section-eyebrow">Work</p>
     <div class="work-card">
       <div class="work-img">
         <img src="app.jpg" alt="LAYERS ANATOMY — iPadで動作するインタラクティブ解剖学ビューワー">
       </div>
       <div class="work-detail">
         <span class="work-badge">開発中</span>
-        <div style="display:flex; align-items:center; gap:16px; margin-bottom:16px;">
-          <img src="la-icon.png" alt="LAYERS ANATOMY icon" style="width:52px; height:52px; border-radius:12px; flex-shrink:0;">
-          <img src="la-title.png" alt="LAYERS ANATOMY" style="max-width:280px; width:100%; height:auto;">
+        <div class="work-logo-row">
+          <img class="icon" src="la-icon.png" alt="LAYERS ANATOMY icon">
+          <img class="title-img" src="la-title.png" alt="LAYERS ANATOMY">
         </div>
         <p class="work-subtitle">Anatomical Viewer</p>
-        <p class="work-text" style="font-family:'Noto Sans JP',sans-serif; font-size:13px; line-height:2;">
+        <p class="work-text">
           手描き解剖図625枚をレイヤー構造で組み上げたインタラクティブ2D解剖学ビューワー。
           イラストレーター・VTuberモデラー・デジタルクリエイター向けに設計されています。
         </p>
         <ul class="work-specs">
-          <li class="work-spec" style="font-family:'Noto Sans JP',sans-serif; font-size:13px;">手描き解剖図 625枚収録</li>
-          <li class="work-spec" style="font-family:'Noto Sans JP',sans-serif; font-size:13px;">レイヤー構造による深度ナビゲーション</li>
-          <li class="work-spec" style="font-family:'Noto Sans JP',sans-serif; font-size:13px;">iPad · iOS · Steam（Windows）対応</li>
-          <li class="work-spec" style="font-family:'Noto Sans JP',sans-serif; font-size:13px;">学術研究者による監修（協議中）</li>
+          <li class="work-spec">手描き解剖図 625枚収録</li>
+          <li class="work-spec">レイヤー構造による深度ナビゲーション</li>
+          <li class="work-spec">iPad · iOS · Steam（Windows）対応</li>
+          <li class="work-spec">学術研究者による監修（協議中）</li>
         </ul>
         <a class="cta-link" href="https://layersanatomy.com" target="_blank" rel="noopener">
           layersanatomy.com を見る &rarr;
@@ -87,15 +75,13 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <!-- COMPANY -->
-<div class="section-block" id="company" style="background:var(--white);">
-  <div class="section-label-col">
-    <span>Company</span>
-  </div>
-  <div class="section-content">
-    <h2 style="font-family:'Noto Sans JP',sans-serif; font-size:24px; font-weight:300; margin-bottom:36px; letter-spacing:0.04em;">会社概要</h2>
+<section id="company">
+  <div class="section-pad">
+    <p class="section-eyebrow">Company</p>
+    <h2 style="font-family:'Noto Sans JP',sans-serif; font-size:22px; font-weight:300; margin-bottom:24px;">会社概要</h2>
     <div class="company-grid">
       <div class="company-cell full">
         <p class="company-label">屋号</p>
@@ -113,28 +99,29 @@
         <p class="company-label">メールアドレス</p>
         <p class="company-value">info@inkframe-studio.com</p>
       </div>
-      <div class="company-cell">
+      <div class="company-cell full">
         <p class="company-label">設立</p>
         <p class="company-value">2026年4月</p>
       </div>
-      <div class="company-cell">
+      <div class="company-cell full">
         <p class="company-label">事業内容</p>
         <p class="company-value">アプリケーションソフトウェアおよびデジタルコンテンツの開発・販売・配信</p>
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <!-- CONTACT -->
-<div class="section-block contact-wrap" id="contact">
-  <div class="section-label-col">
-    <span>Contact</span>
-  </div>
-  <div class="section-content">
+<section id="contact">
+  <div class="section-pad">
+    <p class="contact-section-eyebrow">Contact</p>
     <h2 class="contact-title">お問い合わせ</h2>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScickL5tB8OaW92qMERPSSuy2w78cdAFKU0HUucGueeboJIHQ/viewform?embedded=true" width="100%" height="857" frameborder="0" marginheight="0" marginwidth="0" style="border:none; max-width:720px; display:block;">読み込んでいます…</iframe>
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLScickL5tB8OaW92qMERPSSuy2w78cdAFKU0HUucGueeboJIHQ/viewform?embedded=true"
+      width="100%" height="857" frameborder="0" marginheight="0" marginwidth="0"
+      style="border:none; display:block; max-width:680px;">読み込んでいます…</iframe>
   </div>
-</div>
+</section>
 
 <footer>
   <p class="footer-copy">&copy; 2026 INKFRAME STUDIO. All rights reserved.</p>
