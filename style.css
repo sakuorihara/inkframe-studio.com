@@ -354,3 +354,23 @@ footer {
   .policy-body { padding: 60px; }
   footer { padding: 28px 60px; }
 }
+
+/* ── LANGUAGE SWITCHER ── */
+[data-lang="ja"] .en { display: none !important; }
+[data-lang="en"] .ja { display: none !important; }
+
+#lang-toggle {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.14em;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  color: var(--mid);
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+  display: flex; align-items: center; gap: 5px;
+}
+#lang-toggle:hover { color: var(--black); border-color: var(--black); }
+#lang-toggle svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 1.5; }

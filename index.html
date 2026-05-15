@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" data-lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Inkframe Studio — 東京・渋谷のクリエイティブスタジオ</title>
-<meta name="description" content="Inkframe Studioは東京・渋谷を拠点とする独立系クリエイティブスタジオです。アーティストや教育者のためのインタラクティブなデジタルプロダクトを開発しています。">
+<meta name="description" content="Inkframe Studioは東京・渋谷を拠点とする独立系クリエイティブスタジオです。">
 <link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="icon" href="favicon.ico" sizes="32x32">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -21,31 +19,41 @@
     <img src="banner.png" alt="Inkframe Studio">
   </a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#work">Work</a></li>
-    <li><a href="#company">Company</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about"><span class="ja">About</span><span class="en">About</span></a></li>
+    <li><a href="#work"><span class="ja">Work</span><span class="en">Work</span></a></li>
+    <li><a href="#company"><span class="ja">Company</span><span class="en">Company</span></a></li>
+    <li><a href="#contact"><span class="ja">Contact</span><span class="en">Contact</span></a></li>
   </ul>
+  <button id="lang-toggle" onclick="toggleLang()" aria-label="言語切替 / Switch language">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="12" cy="12" r="10"/>
+      <line x1="2" y1="12" x2="22" y2="12"/>
+      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+    </svg>
+    EN
+  </button>
 </nav>
 
 <!-- ABOUT -->
 <section id="about">
-  <!-- ビジュアルを先に（スマホでは最上部に表示） -->
   <div class="about-visual">
     <div class="about-visual-inner">
       <img src="banner.png" alt="Inkframe Studio">
-      <p class="about-visual-tagline">Where art meets anatomy.</p>
+      <p class="about-visual-tagline">
+        <span class="ja">Designed for structural understanding.</span>
+        <span class="en">Designed for structural understanding.</span>
+      </p>
     </div>
   </div>
-  <!-- テキストはビジュアルの後 -->
   <div class="about-main">
     <p class="hero-eyebrow">Inkframe Studio — Est. 2026</p>
     <h1 class="hero-title">
-      人体を、<br>レイヤーで<br><em>読み解く。</em>
+      <span class="ja">構造を、<br>体験へ。</span>
+      <span class="en">Structure<br>into experience.</span>
     </h1>
     <p class="hero-desc">
-      Inkframe Studioは、東京・渋谷を拠点とする独立系クリエイティブスタジオです。
-      アートと解剖学、教育の交差点で、クリエイターのための精緻なデジタルプロダクトを開発しています。
+      <span class="ja">Inkframe Studioは、東京・渋谷を拠点とする独立系クリエイティブスタジオです。アートと解剖学、教育の交差点で、クリエイターのための精緻なデジタルプロダクトを開発しています。</span>
+      <span class="en">Inkframe Studio is an independent creative studio based in Shibuya, Tokyo. We develop precise digital products for creators at the intersection of art, anatomy, and education.</span>
     </p>
   </div>
 </section>
@@ -56,25 +64,34 @@
     <p class="section-eyebrow">Work</p>
     <div class="work-card">
       <div class="work-img">
-        <img src="app.jpg" alt="LAYERS ANATOMY — iPadで動作するインタラクティブ解剖学ビューワー">
+        <img src="app.jpg" alt="LAYERS ANATOMY">
       </div>
       <div class="work-detail">
-        <span class="work-badge">開発中</span>
+        <span class="work-badge">
+          <span class="ja">開発中</span>
+          <span class="en">In Development</span>
+        </span>
         <div class="work-logo-row">
           <img class="icon" src="la-icon.png" alt="LAYERS ANATOMY icon">
           <img class="title-img" src="la-title.png" alt="LAYERS ANATOMY">
         </div>
         <p class="work-subtitle">Anatomical Viewer</p>
         <p class="work-text">
-          手描き解剖図をレイヤー構造で組み上げたインタラクティブ2D解剖学ビューワー。
-          イラストレーター・VTuberモデラー・デジタルクリエイター向けに設計されています。
+          <span class="ja">手描き解剖図をレイヤー構造で組み上げたインタラクティブ2D解剖学ビューワー。イラストレーター・VTuberモデラー・デジタルクリエイター向けに設計されています。</span>
+          <span class="en">An interactive 2D anatomy viewer built from hand-drawn illustrations in a layered structure. Designed for illustrators, VTuber modelers, and digital creators.</span>
         </p>
         <ul class="work-specs">
-          <li class="work-spec">レイヤー構造による深度ナビゲーション</li>
-          <li class="work-spec">iPad · iOS · Steam（Windows）対応</li>
+          <li class="work-spec">
+            <span class="ja">レイヤー構造による深度ナビゲーション</span>
+            <span class="en">Layer-based depth navigation</span>
+          </li>
+          <li class="work-spec">
+            <span class="ja">iPad · iOS · Steam（Windows）対応</span>
+            <span class="en">iPad · iOS · Steam (Windows)</span>
+          </li>
         </ul>
         <a class="cta-link" href="https://layersanatomy.com" target="_blank" rel="noopener">
-          layersanatomy.com を見る &rarr;
+          layersanatomy.com &rarr;
         </a>
       </div>
     </div>
@@ -85,31 +102,40 @@
 <section id="company">
   <div class="section-pad">
     <p class="section-eyebrow">Company</p>
-    <h2 class="section-heading">会社概要</h2>
+    <h2 class="section-heading">
+      <span class="ja">会社概要</span>
+      <span class="en">Company Information</span>
+    </h2>
     <div class="company-grid">
       <div class="company-cell full">
-        <p class="company-label">屋号</p>
+        <p class="company-label"><span class="ja">屋号</span><span class="en">Name</span></p>
         <p class="company-value">インクフレームスタジオ（INKFRAME STUDIO）</p>
       </div>
       <div class="company-cell full">
-        <p class="company-label">代表者</p>
-        <p class="company-value">児玉 直哉（Naoya Kodama）</p>
+        <p class="company-label"><span class="ja">代表者</span><span class="en">Representative</span></p>
+        <p class="company-value"><span class="ja">児玉 直哉</span><span class="en">Naoya Kodama</span></p>
       </div>
       <div class="company-cell full">
-        <p class="company-label">所在地</p>
-        <p class="company-value">〒150-0041 東京都渋谷区神南1丁目11番4号 FPGリンクス神南5階</p>
+        <p class="company-label"><span class="ja">所在地</span><span class="en">Address</span></p>
+        <p class="company-value">
+          <span class="ja">〒150-0041 東京都渋谷区神南1丁目11番4号 FPGリンクス神南5階</span>
+          <span class="en">FPG LINKS JINNAN 5F., 1-11-4, JINNAN, SHIBUYA-KU, TOKYO 150-0041, JAPAN</span>
+        </p>
       </div>
       <div class="company-cell full">
-        <p class="company-label">メールアドレス</p>
+        <p class="company-label">Email</p>
         <p class="company-value">info@inkframe-studio.com</p>
       </div>
       <div class="company-cell full">
-        <p class="company-label">設立</p>
-        <p class="company-value">2026年4月</p>
+        <p class="company-label"><span class="ja">設立</span><span class="en">Established</span></p>
+        <p class="company-value"><span class="ja">2026年4月</span><span class="en">April 2026</span></p>
       </div>
       <div class="company-cell full">
-        <p class="company-label">事業内容</p>
-        <p class="company-value">解剖図アプリケーションソフトウェアおよびデジタルコンテンツの開発・販売・配信</p>
+        <p class="company-label"><span class="ja">事業内容</span><span class="en">Business</span></p>
+        <p class="company-value">
+          <span class="ja">解剖図アプリケーションソフトウェアおよびデジタルコンテンツの開発・販売・配信</span>
+          <span class="en">Development, distribution, and sales of anatomical application software and digital content</span>
+        </p>
       </div>
     </div>
   </div>
@@ -119,24 +145,31 @@
 <section id="contact">
   <div class="section-pad">
     <p class="contact-section-eyebrow">Contact</p>
-    <h2 class="contact-title">お問い合わせ</h2>
+    <h2 class="contact-title">
+      <span class="ja">お問い合わせ</span>
+      <span class="en">Get in Touch</span>
+    </h2>
     <iframe
       src="https://docs.google.com/forms/d/e/1FAIpQLScickL5tB8OaW92qMERPSSuy2w78cdAFKU0HUucGueeboJIHQ/viewform?embedded=true"
       width="100%" height="857" frameborder="0" marginheight="0" marginwidth="0"
-      style="border:none; display:block; max-width:680px;">読み込んでいます…</iframe>
+      style="border:none; display:block; max-width:680px;">
+      <span class="ja">読み込んでいます…</span>
+      <span class="en">Loading…</span>
+    </iframe>
   </div>
 </section>
 
 <footer>
   <p class="footer-copy">&copy; 2026 INKFRAME STUDIO. All rights reserved.</p>
   <ul class="footer-links">
-    <li><a href="site-policy.html">サイトポリシー</a></li>
-    <li><a href="privacy.html">プライバシーポリシー</a></li>
-    <li><a href="cookie-policy.html">クッキーポリシー</a></li>
-    <li><a href="tokushoho.html">特定商取引法に基づく表記</a></li>
+    <li><a href="site-policy.html"><span class="ja">サイトポリシー</span><span class="en">Site Policy</span></a></li>
+    <li><a href="privacy.html"><span class="ja">プライバシーポリシー</span><span class="en">Privacy Policy</span></a></li>
+    <li><a href="cookie-policy.html"><span class="ja">クッキーポリシー</span><span class="en">Cookie Policy</span></a></li>
+    <li><a href="tokushoho.html"><span class="ja">特定商取引法に基づく表記</span><span class="en">Specified Commercial Transactions Act</span></a></li>
   </ul>
 </footer>
 
+<script src="lang.js"></script>
 <script src="cookie-consent.js"></script>
 </body>
 </html>

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" data-lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>特定商取引法に基づく表記 — Inkframe Studio</title>
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Mono&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
@@ -18,93 +20,108 @@
     <li><a href="index.html#company">Company</a></li>
     <li><a href="index.html#contact">Contact</a></li>
   </ul>
+  <button id="lang-toggle" onclick="toggleLang()" aria-label="Switch language">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.5;"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+    EN
+  </button>
 </nav>
-
 <div class="policy-page">
   <div class="policy-hero">
-    <h1>特定商取引法に基づく表記</h1>
-    <p class="date">Specified Commercial Transactions Act</p>
+    <h1><span class="ja">特定商取引法に基づく表記</span><span class="en">Specified Commercial Transactions Act</span></h1>
+    <p class="date"><span class="ja">特定商取引法第11条に基づく表示</span><span class="en">Disclosure pursuant to Japan's Specified Commercial Transactions Act</span></p>
   </div>
   <div class="policy-body">
     <table>
       <tbody>
         <tr>
-          <th>販売業者</th>
+          <th><span class="ja">販売業者</span><span class="en">Seller</span></th>
           <td>インクフレームスタジオ（Inkframe Studio）</td>
         </tr>
         <tr>
-          <th>運営統括責任者</th>
-          <td>児玉 直哉</td>
+          <th><span class="ja">運営統括責任者</span><span class="en">Representative</span></th>
+          <td><span class="ja">児玉 直哉</span><span class="en">Naoya Kodama</span></td>
         </tr>
         <tr>
-          <th>所在地</th>
-          <td>〒150-0041<br>東京都渋谷区神南1丁目11番4号 FPGリンクス神南5階</td>
+          <th><span class="ja">所在地</span><span class="en">Address</span></th>
+          <td>
+            <span class="ja">〒150-0041 東京都渋谷区神南1丁目11番4号 FPGリンクス神南5階</span>
+            <span class="en">FPG LINKS JINNAN 5F., 1-11-4, JINNAN, SHIBUYA-KU, TOKYO 150-0041, JAPAN</span>
+          </td>
         </tr>
         <tr>
-          <th>電話番号</th>
-          <td>070-3665-8042<br><span style="font-size:12px; color:#888;">（お問い合わせはメールをご利用ください）</span></td>
+          <th><span class="ja">電話番号</span><span class="en">Phone</span></th>
+          <td>070-3665-8042<br><span style="font-size:12px;color:#888;"><span class="ja">（お問い合わせはメールをご利用ください）</span><span class="en">(Please use email for inquiries)</span></span></td>
         </tr>
         <tr>
-          <th>メールアドレス</th>
+          <th><span class="ja">メールアドレス</span><span class="en">Email</span></th>
           <td>info@inkframe-studio.com</td>
         </tr>
         <tr>
-          <th>販売URL</th>
+          <th><span class="ja">販売URL</span><span class="en">Sales URL</span></th>
           <td>
             <a href="https://inkframe-studio.com" style="color:var(--gold);">https://inkframe-studio.com</a><br>
             <a href="https://layersanatomy.com" style="color:var(--gold);">https://layersanatomy.com</a>
           </td>
         </tr>
         <tr>
-          <th>販売価格以外の必要料金</th>
-          <td>インターネット接続料金・通信料金はお客様のご負担となります。</td>
+          <th><span class="ja">販売価格以外の必要料金</span><span class="en">Additional Fees</span></th>
+          <td><span class="ja">インターネット接続料金・通信料金はお客様のご負担となります。</span><span class="en">Internet connection and communication fees are the responsibility of the customer.</span></td>
         </tr>
         <tr>
-          <th>支払方法</th>
-          <td>クレジットカード（Visa・Mastercard・American Express・JCB 等）<br>
-          <span style="font-size:12px; color:#666;">※ 各プラットフォーム（App Store・Steam・Gumroad 等）の決済システムによります。</span></td>
+          <th><span class="ja">支払方法</span><span class="en">Payment Method</span></th>
+          <td>
+            <span class="ja">クレジットカード（Visa・Mastercard・American Express・JCB 等）</span>
+            <span class="en">Credit card (Visa, Mastercard, American Express, JCB, etc.)</span>
+            <br><span style="font-size:12px;color:#666;"><span class="ja">※ 各プラットフォームの決済システムによります。</span><span class="en">※ Depends on each platform's payment system (App Store, Steam, Gumroad, etc.).</span></span>
+          </td>
         </tr>
         <tr>
-          <th>支払時期</th>
-          <td>ご購入手続き完了時にお支払いが確定します。<br>
-          サブスクリプションの場合は、各請求サイクルの開始時に自動引き落としとなります。</td>
+          <th><span class="ja">支払時期</span><span class="en">Payment Timing</span></th>
+          <td>
+            <span class="ja">ご購入手続き完了時にお支払いが確定します。サブスクリプションの場合は各請求サイクルの開始時に自動引き落とし。</span>
+            <span class="en">Payment is confirmed upon completion of the purchase. Subscriptions are automatically charged at the start of each billing cycle.</span>
+          </td>
         </tr>
         <tr>
-          <th>商品の引き渡し時期</th>
-          <td>デジタルコンテンツのため、お支払い確認後、即時ダウンロード・利用可能となります。</td>
+          <th><span class="ja">商品の引き渡し時期</span><span class="en">Delivery</span></th>
+          <td><span class="ja">デジタルコンテンツのため、お支払い確認後、即時ダウンロード・利用可能となります。</span><span class="en">As digital content, products are available for immediate download and use upon payment confirmation.</span></td>
         </tr>
         <tr>
-          <th>返品・キャンセルについて</th>
-          <td>デジタルコンテンツの性質上、購入確定後の返品・返金は原則お受けできません。ただし、重大な瑕疵・不具合が確認された場合は、個別に対応いたします。<br>
-          サブスクリプションは次回更新日の前日までにキャンセルすることで、以後の請求を停止できます。<br>
-          <span style="font-size:12px; color:#666;">※ App Store・Steam 等のプラットフォーム経由のご購入については、各プラットフォームの返金ポリシーに従います。</span></td>
+          <th><span class="ja">返品・キャンセル</span><span class="en">Returns & Cancellations</span></th>
+          <td>
+            <span class="ja">デジタルコンテンツの性質上、購入確定後の返品・返金は原則お受けできません。ただし、重大な瑕疵・不具合が確認された場合は個別に対応いたします。サブスクリプションは次回更新日の前日までにキャンセルすることで以後の請求を停止できます。</span>
+            <span class="en">Due to the nature of digital content, returns and refunds are generally not accepted after purchase is confirmed. Exceptions may be made for significant defects. Subscriptions can be cancelled by the day before the next renewal date to stop future charges.</span>
+            <br><span style="font-size:12px;color:#666;"><span class="ja">※ App Store・Steam 等経由のご購入は各プラットフォームの返金ポリシーに従います。</span><span class="en">※ Purchases via App Store, Steam, etc. are subject to each platform's refund policy.</span></span>
+          </td>
         </tr>
         <tr>
-          <th>動作環境</th>
-          <td>・iPad版：iPadOS 16以降 / iPad（第9世代以降）対応<br>
-          ・Steam版（Windows）：Windows 10以降 / DirectX 11対応GPU</td>
+          <th><span class="ja">動作環境</span><span class="en">System Requirements</span></th>
+          <td>
+            <span class="ja">・iPad版：iPadOS 16以降 / iPad（第9世代以降）<br>・Steam版（Windows）：Windows 10以降 / DirectX 11対応GPU</span>
+            <span class="en">・iPad: iPadOS 16 or later / iPad (9th generation or later)<br>・Steam (Windows): Windows 10 or later / DirectX 11 compatible GPU</span>
+          </td>
         </tr>
         <tr>
-          <th>お問い合わせ</th>
+          <th><span class="ja">お問い合わせ</span><span class="en">Contact</span></th>
           <td>
             info@inkframe-studio.com<br>
-            <a href="index.html#contact" style="color:var(--gold); text-decoration:underline; text-underline-offset:3px;">→ お問い合わせフォームはこちら</a>
+            <a href="index.html#contact" style="color:var(--gold);text-decoration:underline;text-underline-offset:3px;"><span class="ja">→ お問い合わせフォームはこちら</span><span class="en">→ Contact Form</span></a>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
-
 <footer>
   <p class="footer-copy">&copy; 2026 INKFRAME STUDIO. All rights reserved.</p>
   <ul class="footer-links">
-    <li><a href="site-policy.html">サイトポリシー</a></li>
-    <li><a href="privacy.html">プライバシーポリシー</a></li>
-    <li><a href="cookie-policy.html">クッキーポリシー</a></li>
-    <li><a href="tokushoho.html">特定商取引法に基づく表記</a></li>
+    <li><a href="site-policy.html"><span class="ja">サイトポリシー</span><span class="en">Site Policy</span></a></li>
+    <li><a href="privacy.html"><span class="ja">プライバシーポリシー</span><span class="en">Privacy Policy</span></a></li>
+    <li><a href="cookie-policy.html"><span class="ja">クッキーポリシー</span><span class="en">Cookie Policy</span></a></li>
+    <li><a href="tokushoho.html"><span class="ja">特定商取引法に基づく表記</span><span class="en">Specified Commercial Transactions Act</span></a></li>
   </ul>
 </footer>
+<script src="lang.js"></script>
 <script src="cookie-consent.js"></script>
 </body>
 </html>
