@@ -63,10 +63,15 @@ nav {
 #about {
   padding-top: 56px;
   border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
 }
+/* モバイル：ビジュアルが先、テキストが後 */
+.about-visual { order: 1; }
+.about-main   { order: 2; }
 
 .about-main {
-  padding: 56px 20px 48px;
+  padding: 48px 20px 48px;
 }
 
 .hero-eyebrow {
@@ -81,14 +86,14 @@ nav {
 }
 
 .hero-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(36px, 8vw, 72px); font-weight: 300;
-  line-height: 1.1; margin-bottom: 24px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: clamp(28px, 7vw, 56px); font-weight: 300;
+  line-height: 1.4; margin-bottom: 24px; letter-spacing: 0.02em;
 }
-.hero-title em { font-style: italic; color: var(--gold); }
+.hero-title em { font-style: normal; color: var(--gold); font-weight: 400; }
 
 .hero-desc {
-  font-size: 14px; color: #555; line-height: 2; margin-bottom: 0;
+  font-size: 14px; color: #444; line-height: 2; margin-bottom: 0;
 }
 
 .about-visual {
@@ -112,8 +117,14 @@ nav {
 }
 .about-visual-tagline {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 14px; font-style: italic;
-  color: rgba(255,255,255,0.75); margin-top: 16px; letter-spacing: 0.04em;
+  font-size: 17px; font-style: italic;
+  color: rgba(255,255,255,0.9); margin-top: 20px; letter-spacing: 0.06em;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+}
+
+.section-heading {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 20px; font-weight: 300; margin-bottom: 24px; letter-spacing: 0.04em;
 }
 
 /* ── WORK ── */
@@ -155,7 +166,7 @@ nav {
   font-size: 16px; font-style: italic; color: var(--mid); margin-bottom: 16px;
 }
 .work-text {
-  font-size: 13px; color: #555; line-height: 1.9; margin-bottom: 20px;
+  font-size: 14px; color: #444; line-height: 2; margin-bottom: 20px;
 }
 .work-specs {
   display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px;
@@ -188,7 +199,7 @@ nav {
   font-family: 'DM Mono', monospace; font-size: 9px;
   letter-spacing: 0.18em; text-transform: uppercase; color: var(--mid); margin-bottom: 4px;
 }
-.company-value { font-size: 13px; font-weight: 400; color: var(--black); line-height: 1.6; }
+.company-value { font-size: 14px; font-weight: 400; color: #222; line-height: 1.7; }
 
 /* ── CONTACT ── */
 #contact { background: var(--black); }
@@ -299,7 +310,9 @@ footer {
   .nav-links { gap: 40px; }
 
   /* About: 2カラム */
-  #about { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; }
+  #about { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; flex-direction: unset; }
+  .about-visual { order: 2; }
+  .about-main   { order: 1; }
   .about-main {
     padding: 120px 60px 80px;
     border-right: 1px solid var(--border);
