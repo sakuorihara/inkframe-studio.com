@@ -3,14 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Inkframe Studio — 東京・渋谷のクリエイティブスタジオ</title>
-<meta name="description" content="Inkframe Studioは東京・渋谷を拠点とする独立系クリエイティブスタジオです。">
+<title>Inkframe Studio — 構造を、表現へ。</title>
+<meta name="description" content="Inkframe Studioは東京・渋谷の独立系クリエイティブスタジオです。人体構造の理解を、クリエイターの表現へ翻訳するプロダクトを開発しています。">
 <link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+/* ===== _02 additions (scoped, style.css untouched) ===== */
+
+/* Philosophy */
+#philosophy{background:#0d0d0d;padding:120px 24px;}
+.phi-inner{max-width:760px;margin:0 auto;}
+.phi-eyebrow{font-family:"DM Mono",monospace;font-size:11px;letter-spacing:0.28em;
+  text-transform:uppercase;color:#B89A5A;margin:0 0 56px;}
+.phi-item{padding:40px 0;border-top:1px solid rgba(255,255,255,0.08);}
+.phi-item:last-of-type{border-bottom:1px solid rgba(255,255,255,0.08);}
+.phi-line{font-family:"Cormorant Garamond","Noto Sans JP",serif;font-weight:300;
+  font-size:clamp(22px,3.4vw,32px);line-height:1.5;color:rgba(255,255,255,0.92);margin:0;}
+.phi-line em{font-style:italic;color:#B89A5A;}
+.phi-sub{font-family:"Noto Sans JP",sans-serif;font-weight:300;font-size:13px;
+  line-height:1.9;color:rgba(255,255,255,0.45);margin:14px 0 0;}
+.phi-close{font-family:"DM Mono",monospace;font-size:11px;letter-spacing:0.22em;
+  text-transform:uppercase;color:rgba(255,255,255,0.35);margin:56px 0 0;}
+
+/* Work tagline */
+.work-tagline{font-family:"Cormorant Garamond","Noto Sans JP",serif;font-weight:300;
+  font-style:italic;font-size:clamp(18px,2.6vw,24px);line-height:1.5;
+  color:#B89A5A;margin:0 0 18px;}
+
+/* Contact note */
+.contact-note{font-family:"Noto Sans JP",sans-serif;font-weight:300;font-size:14px;
+  line-height:2;max-width:560px;margin:0 0 36px;opacity:0.7;}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
+</style>
 </head>
 <body>
 
@@ -20,6 +49,7 @@
   </a>
   <ul class="nav-links">
     <li><a href="#about"><span class="ja">About</span><span class="en">About</span></a></li>
+    <li><a href="#philosophy"><span class="ja">Philosophy</span><span class="en">Philosophy</span></a></li>
     <li><a href="#work"><span class="ja">Work</span><span class="en">Work</span></a></li>
     <li><a href="#company"><span class="ja">Company</span><span class="en">Company</span></a></li>
     <li><a href="#contact"><span class="ja">Contact</span><span class="en">Contact</span></a></li>
@@ -48,17 +78,57 @@
   <div class="about-main">
     <p class="hero-eyebrow">Inkframe Studio — Est. 2026</p>
     <h1 class="hero-title">
-      <span class="ja">構造を、<br>体験へ。</span>
-      <span class="en">Structure<br>into experience.</span>
+      <span class="ja">構造を、<br>表現へ。</span>
+      <span class="en">Structure<br>into expression.</span>
     </h1>
     <p class="hero-desc">
-      <span class="ja">Inkframe Studioは、東京・渋谷を拠点とする独立系クリエイティブスタジオです。アートと解剖学、教育の交差点で、クリエイターのための精緻なデジタルプロダクトを開発しています。</span>
-      <span class="en">Inkframe Studio is an independent creative studio based in Shibuya, Tokyo. We develop precise digital products for creators at the intersection of art, anatomy, and education.</span>
+      <span class="ja">Inkframe Studioは、東京・渋谷の独立系クリエイティブスタジオです。人体構造の理解を、クリエイターの表現へ翻訳するプロダクトを開発しています。</span>
+      <span class="en">Inkframe Studio is an independent creative studio in Shibuya, Tokyo. We build products that translate structural understanding of the human body into creative expression.</span>
     </p>
   </div>
 </section>
 
-<!-- WORK -->
+<!-- PHILOSOPHY -->
+<section id="philosophy">
+  <div class="phi-inner">
+    <p class="phi-eyebrow">Philosophy</p>
+
+    <div class="phi-item">
+      <p class="phi-line">
+        <span class="ja">CGは情報を再現する。<br>手描きは<em>構造を翻訳する</em>。</span>
+        <span class="en">CG reproduces information.<br>The hand <em>translates structure</em>.</span>
+      </p>
+      <p class="phi-sub">
+        <span class="ja">人が描くとき、そこに選択が生まれる。何を強調し、何を省くか。その選択が、見る人の理解を助ける。</span>
+        <span class="en">When a person draws, choices are made — what to emphasize, what to leave out. Those choices are what help the viewer understand.</span>
+      </p>
+    </div>
+
+    <div class="phi-item">
+      <p class="phi-line">
+        <span class="ja">理解とは、<br><em>なぜその形になるのか</em>を説明できる状態。</span>
+        <span class="en">Understanding means being able to explain<br><em>why a form is the way it is</em>.</span>
+      </p>
+      <p class="phi-sub">
+        <span class="ja">名称の暗記ではない。見えていない内部を想像できること。構造理解のある表現には、説得力が生まれる。</span>
+        <span class="en">Not memorizing names — imagining the structure beneath the surface. Expression grounded in structural understanding carries conviction.</span>
+      </p>
+    </div>
+
+    <div class="phi-item">
+      <p class="phi-line">
+        <span class="ja">AIが「正しさ」を生成するほど、<br><em>「意図」の価値</em>は上がる。</span>
+        <span class="en">The more AI generates <em>correctness</em>,<br>the more <em>intent</em> is worth.</span>
+      </p>
+      <p class="phi-sub">
+        <span class="ja">手描きであることは、懐古ではない。現代への応答である。</span>
+        <span class="en">Drawing by hand is not nostalgia. It is a response to the present.</span>
+      </p>
+    </div>
+
+    <p class="phi-close">Inkframe Studio — Tokyo</p>
+  </div>
+</section>
 <section id="work">
   <div class="section-pad">
     <p class="section-eyebrow">Work</p>
@@ -76,9 +146,13 @@
           <img class="title-img" src="la-title.png" alt="LAYERS ANATOMY">
         </div>
         <p class="work-subtitle">Anatomical Viewer</p>
+        <p class="work-tagline">
+          <span class="ja">人体は、操作できる。</span>
+          <span class="en">The human body is operable.</span>
+        </p>
         <p class="work-text">
-          <span class="ja">手描き解剖図をレイヤー構造で組み上げたインタラクティブ2D解剖学ビューワー。イラストレーター・VTuberモデラー・デジタルクリエイター向けに設計されています。</span>
-          <span class="en">An interactive 2D anatomy viewer built from hand-drawn illustrations in a layered structure. Designed for illustrators, VTuber modelers, and digital creators.</span>
+          <span class="ja">手描きの解剖図をレイヤー構造で組み上げた、触れる2D解剖図ビューワー。イラストレーター・VTuberモデラー・デジタルクリエイターのために設計されています。</span>
+          <span class="en">A hands-on 2D anatomy viewer built from hand-drawn illustrations in a layered structure. Designed for illustrators, VTuber modelers, and digital creators.</span>
         </p>
         <ul class="work-specs">
           <li class="work-spec">
@@ -141,6 +215,10 @@
       <span class="ja">お問い合わせ</span>
       <span class="en">Get in Touch</span>
     </h2>
+    <p class="contact-note">
+      <span class="ja">業務提携・ライセンス・取材のご相談も、こちらのフォームから受け付けています。</span>
+      <span class="en">Inquiries about partnerships, licensing, and media coverage are welcome through this form.</span>
+    </p>
     <iframe
       src="https://docs.google.com/forms/d/e/1FAIpQLScickL5tB8OaW92qMERPSSuy2w78cdAFKU0HUucGueeboJIHQ/viewform?embedded=true"
       width="100%" height="857" frameborder="0" marginheight="0" marginwidth="0"
